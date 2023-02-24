@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.sing_input {
+    margin: 1em 0 1em 0;
+    position: relative;
+}
+
+.sing_input input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgba(94, 130, 128, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 90%;
+}
+
+.sing_input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 1em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+
+.sing_input :is(input:focus, input:valid) ~ label {
+    transform: translateY(-70%) scale(.9);
+    margin: 0;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #cfdbda;
+    border-radius: 5px;
+}
+
+.sing_input :is(input:focus, input:valid) {
+    border-color: rgb(169, 169, 169);
+}
+
+.singUp_form {
+    width: 97vw;
+    height: 97vh;
+    display: grid;
+    place-items: center;
+}
+
+.singUp_form > form {
+    background-image: linear-gradient(to left bottom, #5e7e7d, #5d8582, #5d8c86, #5d9389, #5e9a8c);
+    width: 350px;
+    padding: 40px;
+    border: 1px solid rgba(94, 130, 128, 0.6);
+    border-radius: 10px;
+}
+
+.singUp_form > form > .sing_input {
+    display: grid;
+    place-items: center;
+}
+
+.singUp_form > form > button {
+    color: rgba(31, 31, 31, 0.7);
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: 2px;
+    background-image: linear-gradient(to right top, #8dcf8a, #6ec08d);
+    padding: 13px;
+    right: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(82, 126, 67, 0.6);
+}
+
+.singUp_form > form > button:hover {
+    background-image: linear-gradient(to right, #8dcf8a, #6ec08d, #51b18e, #38a18e, #23908b);
+}
+
+.fade-in-image {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.text-danger {
+    color: rgba(224, 2, 2, 0.9);
+    font-size: 18px;
+}
+
+.button_log {
+    display: flex;
+    justify-content: center;
+    bottom: 10%;
+}
+
+.button_log > button {
+    color: rgba(31, 31, 31, 0.7);
+    font-weight: 600;
+    font-size: 14px;
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to right top, #8dcf8a, #6ec08d);
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid rgba(82, 126, 67, 0.6);
+}
+
+.button_log > button:hover {
+    background-image: linear-gradient(to right, #8dcf8a, #6ec08d, #51b18e, #38a18e, #23908b);
+}
+
+.logs {
+    border: 1px solid #525151;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px
+}
