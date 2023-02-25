@@ -8,8 +8,8 @@
         <label for="name">Ім'я</label>
       </div>
       <div class="sing_input">
-        <input required type="text" id="patronymic" v-model="patronymic">
-        <label for="patronymic">По батькові</label>
+        <input required type="text" id="lastname" v-model="lastname">
+        <label for="lastname">Фамілія</label>
       </div>
       <div class="sing_input">
         <input required type="email" id="email" autocomplete="new-email" v-model="email">
@@ -43,10 +43,11 @@
     <a @click.prevent="register_success = false" style="color: #8dcf8a;font-size: 20px;cursor: pointer">Повернутися</a>
   </div>
   <div v-if="logs" style="display: flex;flex-wrap: wrap;justify-content: center">
-    <div v-for="log in logs" style="width: 19%;">
+    <div v-for="log in logs" class="log_card">
       <div class="logs">
         <p><strong>Ім'я:</strong> {{ log.name }}</p>
         <p><strong>Помилка:</strong> {{ log.error }}</p>
+        <p><strong>Час:</strong> {{ log.time }}</p>
       </div>
     </div>
   </div>
@@ -61,7 +62,7 @@ export default {
   data() {
     return {
       name: null,
-      patronymic: null,
+      lastname: null,
       email: null,
       password: null,
       password_confirmation: null,
@@ -84,7 +85,7 @@ export default {
           this.loaderActive = true
           await axios.post('/api/auth/reg', {
             name: this.name,
-            patronymic: this.patronymic,
+            lastname: this.lastname,
             email: this.email,
             password: this.password,
             password_confirmation: this.password_confirmation,
@@ -123,7 +124,7 @@ export default {
     clearInputs() {
       this.register_success = true
       this.name = null
-      this.patronymic = null
+      this.lastname = null
       this.email = null
       this.password = null
       this.password_confirmation = null

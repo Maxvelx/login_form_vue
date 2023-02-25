@@ -1,7 +1,5 @@
 <template>
-  <nav></nav>
   <RouterView/>
-<footer></footer>
 </template>
 
 <script setup>

@@ -161,10 +161,18 @@ body {
 .button_log > button:hover {
     background-image: linear-gradient(to right, #8dcf8a, #6ec08d, #51b18e, #38a18e, #23908b);
 }
-
+.log_card{
+    width: 250px;
+}
 .logs {
     border: 1px solid #525151;
     margin: 5px;
     border-radius: 5px;
     padding: 10px
+}
+@media (max-width: 768px) {
+    .singUp_form > form {
+        width: 240px;
+
+    }
 }
